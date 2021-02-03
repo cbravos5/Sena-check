@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mega Sena Checkup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <section id="top-content">
+      <div class="alert">
+        <strong>Atenção!!!</strong> Você deve clicar em carregar antes de
+        conferir os números
+      </div>
+      <div class="selected-numbers">
+        <input type="number" id="first-number" />
+        <input type="number" id="second-number" />
+        <input type="number" id="third-number" />
+        <input type="number" id="fourth-number" />
+        <input type="number" id="fifth-number" />
+        <input type="number" id="sixth-number" />
+      </div>
+      <div class="drawn">
+        <h2></h2>
+      </div>
+    </section>
+
+    <section class="bottom-content">
+      <div class="load-check">
+        <button id="check">Conferir</button>
+        <button id="load">
+          <span id="not-loaded" class="visible">Carregar</span>
+          <span id="loaded" class="material-icons hidden"> check_circle </span>
+        </button>
+      </div>
+      <div class="numbers-table"></div>
+
+      <div class="clear-content"></div>
+    </section>
+
+    <section class="results">
+      <h1 id="top-info-results">Jogos Ganhos</h1>
+      <div class="type-won">
+        <h2 id="sena">
+          Sena:
+          <div><h3 class="n">0</h3></div>
+        </h2>
+      </div>
+      <div class="type-won">
+        <h2 id="quina">
+          Quina:
+          <div><h3 class="n">0</h3></div>
+        </h2>
+      </div>
+      <div class="type-won">
+        <h2 id="quadra">
+          Quadra:
+          <div><h3 class="n">0</h3></div>
+        </h2>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

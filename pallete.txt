@@ -1,0 +1,4 @@
+#038F31 verde claro
+#104F24 verde escuro
+#CFCC97 amarelinho
+#7D3844 bordô

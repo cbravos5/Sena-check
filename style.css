@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+button {
+  outline: none;
+}
+
+body {
+  background: #038f31;
+}
+
+.bottom-content {
+  display: flex;
+  transition: 0.5s ease;
+}
+
+.load-check,
+.clear-content {
+  flex: 1;
+}
+
+.load-check {
+  align-self: center;
+  text-align: center;
+}
+
+.load-check button {
+  width: 13vw;
+  height: 5vh;
+  margin-top: 3vh;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  line-height: 2rem;
+}
+
+.load-check button:hover {
+  box-shadow: -1px -1px #000000, -2px -2px #000000, -3px -3px #000000;
+  transform: translateX(3px);
+}
+
+.numbers-table {
+  border: none;
+  width: 60vw;
+  height: 50vh;
+  margin: auto;
+  margin-top: 5vh;
+  background: #d8d153;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 5.5vw);
+  grid-template-rows: repeat(auto-fit, 15%);
+  gap: 4px;
+  align-content: center;
+  justify-content: center;
+}
+
+.number {
+  border: none;
+  background: transparent;
+  color: #000000;
+  font-size: 2rem;
+}
+
+.number:hover {
+  background: #038f329f;
+}
+
+.number-selected {
+  background: #038f329f;
+  border: solid;
+}
+.selected-numbers {
+  text-align: center;
+  margin-top: 5vh;
+  transition: 0.5s ease;
+}
+
+.selected-numbers input {
+  border-style: solid;
+  border-width: 2px;
+  width: 6vw;
+  height: 6vw;
+  margin-left: 2vw;
+  text-align: center;
+  font-size: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.results {
+  position: fixed;
+  height: 100%;
+  width: 18vw;
+  top: 0;
+  right: 0;
+  /* background: #c4bcbe; */
+  z-index: 1;
+  overflow: auto;
+  text-align: center;
+}
+
+.drawn {
+  text-align: center;
+  margin-top: 3vh;
+  opacity: 0;
+  height: 4vh;
+  transition: 0.5s ease;
+}
+
+.concurso {
+  color: #ff0000;
+  font-size: 1.7rem;
+}
+
+.data {
+  color: #ff0000;
+  font-size: 1.7rem;
+}
+
+.n {
+  color: #038f31;
+}
+
+.drawn-numbers {
+  color: #ff0000;
+  font-size: 1.5rem;
+}
+
+#top-info-results {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.type-won {
+  background-color: #d8d153;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+.spotlight {
+  background-color: #dad128;
+  border-radius: 20px;
+  margin-top: 2vh;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+#not-loaded {
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: -2.4vh;
+  margin-left: -6vh;
+}
+
+#loaded {
+  position: absolute;
+  margin-top: -2vh;
+  margin-left: -1.5vh;
+  font-size: 1.8rem;
+  color: #016422;
+}
+
+#load {
+  background: linear-gradient(to right, #016422 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+
+.alert {
+  width: 50vw;
+  height: 6.5vh;
+  text-align: center;
+  padding-top: 2vh;
+  background: rgb(252, 94, 94);
+  margin-left: 26vw;
+  margin-top: 3vh;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 2vh;
+  border-style: solid;
+  border-width: 0.5px;
+  font-size: 1.2rem;
+}
